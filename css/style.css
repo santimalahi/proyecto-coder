@@ -75,7 +75,6 @@ header .navbar .container-fluid .hamburguesa{
     color: orange;
     font-size: 90%;
     text-align: center;
-    padding-top: 200px;
     background-image: url(../img/bg-hero2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -90,6 +89,10 @@ header .navbar .container-fluid .hamburguesa{
 .hero p {
     margin: 5px;
     margin-bottom: 20px;
+}
+
+.hero .boton{
+    position: sticky;
 }
 
 
@@ -303,11 +306,18 @@ header .navbar .container-fluid .hamburguesa{
     }
 }
 
+
+@media screen and (max-width:728px),(max-height:346px){
+    .hero .boton{
+        display: none;
+    }
+}
+
 @media screen and (max-width:662px){
     .grupo-tarjetas{
         display: grid;
         grid-template-rows: 500px 500px;
-        grid-template-columns: 400px;
+        grid-template-columns: 450px;
         align-items: center;
         gap: 10px;
         margin-left: 80px;
@@ -322,6 +332,19 @@ header .navbar .container-fluid .hamburguesa{
     
     
 }
+
+@media screen and (max-width:596px) {
+    .hero h2{
+        font-size: 40px;
+    }
+
+
+    .hero p{
+        display: none;
+    }
+    
+}
+
 
 @media screen and (max-width:1276px){
     .videos .videos-contenedor{
