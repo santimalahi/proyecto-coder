@@ -1,0 +1,89 @@
+@media screen and (max-width:1156px){
+    .grupo-tarjetas{
+        display: grid;
+        grid-template-rows: 500px 500px;
+        grid-template-columns: 400px 400px;
+        align-items: center;
+        gap: 10px;
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width:948px){
+    .artistas-container{
+        padding:70px;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .artistas-container{
+        padding: 20px 10px;
+        .artistas-item{
+            .artistas-data{
+                overflow: scroll;
+            }
+        }
+}
+}
+
+@media screen and (max-width:728px),(max-height:346px){
+    .hero{
+        .boton{
+            display: none;
+        } 
+    }
+    
+}
+
+@media screen and (max-width:662px){
+    .grupo-tarjetas{
+        display: grid;
+        grid-template-rows: 500px 500px;
+        grid-template-columns: 450px;
+        align-items: center;
+        gap: 10px;
+        margin-left: 80px;
+    }
+    .vid-item{
+        width: 95%;
+        height: auto;
+    }
+    .grids-container-nosotros{
+        display: block;
+    }
+    
+    
+}
+
+@media screen and (max-width:596px) {
+    .hero{
+        h2{
+            font-size: 40px;
+        }
+    } 
+
+
+    .hero{
+        p{
+            display: none;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width:1276px){
+    .videos{
+        .videos-contenedor{
+            margin: 10vh;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width:1079px){
+    .media{
+        display: block;
+        align-items: center;
+    }
+}

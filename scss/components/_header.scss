@@ -1,0 +1,38 @@
+
+
+header{
+    background-color: black;
+
+    .navbar{
+
+
+        .nav-item{
+            color: orange;
+            list-style: none;
+            margin: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .container-fluid{
+            
+            .navbar-toggler-icon {
+                background-image: none !important;
+            }
+
+            .navbar-toggler::after {
+                content: '☰'; 
+                font-size: 24px; 
+                color: orange; 
+            }
+
+            .hamburguesa{
+                border-color: white !important;
+                box-shadow: none;
+            }
+
+        }
+
+    }
+
+}

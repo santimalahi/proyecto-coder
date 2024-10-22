@@ -1,0 +1,189 @@
+
+
+// INDEX
+
+
+.hero{
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente (opcional) */
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: orange;
+    font-size: 90%;
+    text-align: center;
+    background-image: url(../img/bg-hero2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+        h2{
+            font-size: 50px; 
+
+        }
+
+        p{
+            margin: 5px;
+            margin-bottom: 20px;
+        }
+
+        .boton{
+            position: sticky;
+        }
+
+
+}
+
+
+.lanzamientos-container{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        h3{
+            margin-bottom: 1%;
+        }
+        .grupo-tarjetas{
+            display: grid;
+            grid-template-rows: 500px 500px;
+            grid-template-columns: 400px 400px 400px;
+            gap: 10px;
+            margin-left: 80px;
+        }
+        .ficha{
+            margin: 30px;
+            font-size: 120%;
+                img{-webkit-box-shadow: 6px 10px 5px -4px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 6px 10px 5px -4px rgba(0,0,0,0.75);
+                    box-shadow: 6px 10px 5px -4px rgba(0,0,0,0.75);
+
+                }
+        
+                a{
+                    display: block;
+                    color: black;
+                }
+                p{
+                    margin-top: 10px;
+                }
+                a:hover{
+                    color: orange;
+                }
+        }
+}
+
+
+
+
+
+
+.videos{
+    font-family: 'Courier New', Courier, monospace;  
+    text-align: center;
+        
+        h3{
+            margin: 10px;
+        }
+        .videos-contenedor{
+            margin: 10vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        }
+}
+
+.ficha-vid{
+    margin-bottom: 5px;
+
+        h3{
+            margin-bottom: 5px;
+        }
+}
+
+.media{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel-container{
+        .carousel-img{
+            width: 100vh;
+            height: 100vh;
+        }
+}
+
+.contacto{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+}
+
+
+
+// NOSOTROS
+
+.grids-container-nosotros{
+    display: grid;
+    grid-template-rows: 200px auto;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px;
+    grid-template-areas: 
+    "bio contacto"  
+    "bio gc"
+    ;
+            .contacto-nosotros{
+                font-family: 'Courier New', Courier, monospace;
+                padding: 20px;
+                height: 200px;
+                grid-area: contacto;
+                    
+                    a{
+                        text-decoration: underline !important;
+                        margin: 10px;
+                    }
+                    a:hover{
+                        text-decoration: none !important;
+                    }
+            }
+            .bio-container{
+                padding: 20px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 100%;
+                font-weight: 600;
+                width: 350px;
+                grid-area: bio;
+                    h6{
+                        text-decoration: underline;
+                    }
+            }
+            .good-content-nosotros{
+                grid-area: gc;
+            }
+}
+
+
+// ARTISTAS
+
+
+.artistas-item{
+    margin: 50px;
+        .artistas-data{
+            display: flex;
+            justify-content: space-around;
+                p{
+                    width: 400px;
+                    height: 100px;
+                    text-align:left;
+                }
+                img{
+                    object-fit: contain;
+                }
+        }
+}
