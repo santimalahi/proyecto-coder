@@ -30,8 +30,12 @@
             margin-bottom: 20px;
         }
 
-        .boton{
+        .extend-boton{
+            @extend %boton;
             position: sticky;
+        }
+        .extend-boton:hover{
+            @extend %boton:hover;
         }
 
 
@@ -53,7 +57,7 @@
             grid-template-rows: 500px 500px;
             grid-template-columns: 400px 400px 400px;
             gap: 10px;
-            margin-left: 80px;
+            margin-left: 50px;
         }
         .ficha{
             margin: 30px;
@@ -171,19 +175,67 @@
 
 // ARTISTAS
 
-
-.artistas-item{
+.artistas-container{
     margin: 50px;
-        .artistas-data{
-            display: flex;
-            justify-content: space-around;
-                p{
-                    width: 400px;
-                    height: 100px;
-                    text-align:left;
-                }
-                img{
-                    object-fit: contain;
+        .artistas-item{
+            padding-left: 30px;
+            margin-bottom: 50px;
+                .artistas-data{
+                    // display: grid;
+                    // grid-template-rows: 200px 1fr 1fr;
+                    // grid-template-columns: 500px 1000px;
+                    // grid-template-areas: 
+                    // "data img"
+                    // "data img"
+                    // " . redes";
+                    // gap: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    
+                        .artistas-media{
+                            .artistas-foto{
+                                width: 400px;
+                                height: 600px;
+                            }
+                            
+                            .artistas-redes{
+                                padding: 10px;
+                                a{
+                                    img{
+                                        width:20px;
+                                    }
+                                }
+                            }
+                        }
+                        p{
+                            width: 1750px;
+                            height: 353px;
+                            text-align:left;
+                            grid-area: data;
+                            margin-right: 100px;
+                        }
+                        // img{
+                        //     grid-area: img;
+                        // }
+                        // .artistas-redes{
+                        //     grid-area: redes;
+                        //     a{
+                        //         img{
+                        //             width: 20px;
+                        //         }
+                        //     }
+                        // }
                 }
         }
+
+}
+
+
+
+// CONTACTO
+
+.contacto-nosotros{
+    margin: 30px;
 }

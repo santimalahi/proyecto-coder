@@ -6,6 +6,11 @@
     align-items: center;
     width: auto;
     height: 150px;
+        a:active{
+            scroll-behavior: smooth;
+            transition: 2s ease;
+        
+        }
 }
 
 

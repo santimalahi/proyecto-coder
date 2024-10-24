@@ -1,4 +1,18 @@
 @charset "UTF-8";
+.hero .extend-boton {
+  background-color: blue;
+  color: orange;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  width: 100px;
+  display: block;
+  padding: 5px; }
+
+.hero .extend-boton:hover {
+  background-color: orange;
+  color: blue;
+  font-family: 'Courier New', Courier, monospace; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -8,7 +22,8 @@ a {
   color: black; }
 
 body {
-  font-family: 'Courier New', Courier, monospace; }
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden; }
 
 .boton {
   background-color: blue;
@@ -65,7 +80,7 @@ header {
   .hero p {
     margin: 5px;
     margin-bottom: 20px; }
-  .hero .boton {
+  .hero .extend-boton {
     position: sticky; }
 
 .lanzamientos-container {
@@ -81,7 +96,7 @@ header {
     grid-template-rows: 500px 500px;
     grid-template-columns: 400px 400px 400px;
     gap: 10px;
-    margin-left: 80px; }
+    margin-left: 50px; }
   .lanzamientos-container .ficha {
     margin: 30px;
     font-size: 120%; }
@@ -156,17 +171,31 @@ header {
   .grids-container-nosotros .good-content-nosotros {
     grid-area: gc; }
 
-.artistas-item {
+.artistas-container {
   margin: 50px; }
-  .artistas-item .artistas-data {
-    display: flex;
-    justify-content: space-around; }
-    .artistas-item .artistas-data p {
-      width: 400px;
-      height: 100px;
-      text-align: left; }
-    .artistas-item .artistas-data img {
-      object-fit: contain; }
+  .artistas-container .artistas-item {
+    padding-left: 30px;
+    margin-bottom: 50px; }
+    .artistas-container .artistas-item .artistas-data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .artistas-container .artistas-item .artistas-data .artistas-media .artistas-foto {
+        width: 400px;
+        height: 600px; }
+      .artistas-container .artistas-item .artistas-data .artistas-media .artistas-redes {
+        padding: 10px; }
+        .artistas-container .artistas-item .artistas-data .artistas-media .artistas-redes a img {
+          width: 20px; }
+      .artistas-container .artistas-item .artistas-data p {
+        width: 1750px;
+        height: 353px;
+        text-align: left;
+        grid-area: data;
+        margin-right: 100px; }
+
+.contacto-nosotros {
+  margin: 30px; }
 
 #pie {
   border: 2px solid black;
@@ -176,6 +205,9 @@ header {
   align-items: center;
   width: auto;
   height: 150px; }
+  #pie a:active {
+    scroll-behavior: smooth;
+    transition: 2s ease; }
 
 .redes {
   margin: 10px; }
@@ -194,13 +226,20 @@ header {
     padding: 70px; } }
 
 @media screen and (max-width: 860px) {
+  .carousel .carousel-img img {
+    width: 500px;
+    height: 600px !important; }
   .artistas-container {
     padding: 20px 10px; }
     .artistas-container .artistas-item .artistas-data {
-      overflow: scroll; } }
+      overflow: scroll; }
+  .grids-container-nosotros {
+    display: block; }
+    .grids-container-nosotros .bio-container {
+      text-align: center; } }
 
 @media screen and (max-width: 728px), (max-height: 346px) {
-  .hero .boton {
+  .hero .extend-boton {
     display: none; } }
 
 @media screen and (max-width: 662px) {

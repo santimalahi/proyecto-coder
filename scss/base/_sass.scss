@@ -2,3 +2,20 @@
 
 $color-principal: orange;
 $color-secundario: blue;
+
+
+%boton{
+    background-color: blue;
+    color: orange;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 5px;
+}
+
+%boton:hover{
+    background-color: orange;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}

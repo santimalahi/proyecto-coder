@@ -16,6 +16,15 @@
 }
 
 @media screen and (max-width:860px) {
+    .carousel{
+        .carousel-img{
+            img{
+                width: 500px;
+                height: 600px !important;
+            }
+        }
+    }
+
     .artistas-container{
         padding: 20px 10px;
         .artistas-item{
@@ -23,12 +32,19 @@
                 overflow: scroll;
             }
         }
-}
+    }  
+    .grids-container-nosotros{
+        display: block;
+            .bio-container{
+                text-align: center;
+            }
+        
+        }  
 }
 
 @media screen and (max-width:728px),(max-height:346px){
     .hero{
-        .boton{
+        .extend-boton{
             display: none;
         } 
     }
@@ -60,15 +76,11 @@
         h2{
             font-size: 40px;
         }
-    } 
-
-
-    .hero{
         p{
             display: none;
         }
-    }
-    
+    } 
+
 }
 
 

@@ -10,11 +10,12 @@ a {
 
 body{
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
 }
 
 .boton {
-    background-color: blue;
-    color: orange;
+    background-color: $color-secundario;
+    color: $color-principal;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     width: 100px;
