@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .hero .extend-boton {
-  background-color: blue;
-  color: orange;
+  background-color: #22499e;
+  color: rgba(255, 166, 0, 0.76);
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   width: 100px;
@@ -9,8 +9,8 @@
   padding: 5px; }
 
 .hero .extend-boton:hover {
-  background-color: orange;
-  color: blue;
+  background-color: rgba(255, 166, 0, 0.76);
+  color: #22499e;
   font-family: 'Courier New', Courier, monospace; }
 
 * {
@@ -23,11 +23,12 @@ a {
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .boton {
-  background-color: blue;
-  color: orange;
+  background-color: #22499e;
+  color: rgba(255, 166, 0, 0.76);
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   width: 100px;
@@ -67,7 +68,7 @@ header {
   /* Centra verticalmente (opcional) */
   height: 100vh;
   font-family: 'Courier New', Courier, monospace;
-  color: orange;
+  color: rgba(255, 166, 0, 0.76);
   font-size: 90%;
   text-align: center;
   background-image: url(../img/bg-hero2.jpg);
@@ -136,8 +137,10 @@ header {
   align-items: center; }
 
 .carousel-container .carousel-img {
-  width: 100vh;
+  width: 75vh;
   height: 100vh; }
+  .carousel-container .carousel-img img {
+    width: 100vh; }
 
 .contacto {
   font-family: 'Courier New', Courier, monospace;
@@ -171,49 +174,119 @@ header {
   .grids-container-nosotros .good-content-nosotros {
     grid-area: gc; }
 
-.artistas-container {
-  margin: 50px; }
-  .artistas-container .artistas-item {
-    padding-left: 30px;
-    margin-bottom: 50px; }
-    .artistas-container .artistas-item .artistas-data {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .artistas-container .artistas-item .artistas-data .artistas-media .artistas-foto {
-        width: 400px;
-        height: 600px; }
-      .artistas-container .artistas-item .artistas-data .artistas-media .artistas-redes {
-        padding: 10px; }
-        .artistas-container .artistas-item .artistas-data .artistas-media .artistas-redes a img {
-          width: 20px; }
-      .artistas-container .artistas-item .artistas-data p {
-        width: 1750px;
-        height: 353px;
-        text-align: left;
-        grid-area: data;
-        margin-right: 100px; }
+.artistas-global {
+  margin: 30px;
+  text-align: center; }
+  .artistas-global .art-titulo {
+    display: inline-block;
+    font-weight: 800; }
+    .artistas-global .art-titulo:hover .art-letra {
+      transform: translateY(-5px);
+      font-size: 50px;
+      transition: ease-in-out 1s; }
+    .artistas-global .art-titulo .art-letra {
+      font-size: 35px;
+      transition: font-size ease-out 1s; }
+  .artistas-global .artistas-container {
+    margin: 20px;
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center; }
+    .artistas-global .artistas-container .artistas-tarjetas {
+      margin: 20px; }
+      .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen {
+        width: 100%;
+        display: inline-block; }
+        .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background {
+          background-color: white;
+          position: relative;
+          display: inline-block;
+          border-radius: 8px; }
+          .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background:hover {
+            transform: translate(-5px, -3px); }
+          .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background:hover h2 {
+            visibility: visible;
+            opacity: 1; }
+          .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background img {
+            width: 450px;
+            height: 670px;
+            border-radius: 8px;
+            object-fit: cover; }
+            .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background img:hover {
+              opacity: 90%;
+              transition: opacity 0.5s ease; }
+          .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: orange;
+            font-weight: bold;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 1s ease, visibility 0.5s ease; }
+
+.ar-container .ar-data {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between; }
+  .ar-container .ar-data img {
+    width: 450px;
+    height: 670px; }
+  .ar-container .ar-data .ar-texto h1 {
+    text-align: right;
+    font-weight: 900; }
+  .ar-container .ar-data .ar-texto p {
+    padding-left: 45px;
+    margin-top: 20px;
+    font-size: 16px; }
+
+.ar-container .ar-media {
+  margin: 40px; }
+  .ar-container .ar-media a img {
+    width: 32px;
+    margin: 5px; }
+
+.ar-canciones {
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .ar-canciones .ar-minitarjetas {
+    width: 262px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px; }
+    .ar-canciones .ar-minitarjetas img {
+      width: 100px;
+      height: 100px;
+      align-items: left; }
+    .ar-canciones .ar-minitarjetas .ar-mini-info p {
+      font-size: 13px; }
 
 .contacto-nosotros {
   margin: 30px; }
 
 #pie {
   border: 2px solid black;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto;
+  width: 100%;
   height: 150px; }
-  #pie a:active {
+  #pie .redes a img {
+    width: 32px; }
+  #pie a {
     scroll-behavior: smooth;
-    transition: 2s ease; }
+    transition: scroll-behavior 4s ease; }
 
 .redes {
   margin: 10px; }
 
 @media screen and (max-width: 1156px) {
-  .grupo-tarjetas {
+  .lanzamientos-container .grupo-tarjetas {
     display: grid;
     grid-template-rows: 500px 500px;
     grid-template-columns: 400px 400px;
@@ -226,9 +299,8 @@ header {
     padding: 70px; } }
 
 @media screen and (max-width: 860px) {
-  .carousel .carousel-img img {
-    width: 500px;
-    height: 600px !important; }
+  #spotify {
+    margin: 30px; }
   .artistas-container {
     padding: 20px 10px; }
     .artistas-container .artistas-item .artistas-data {
@@ -243,7 +315,7 @@ header {
     display: none; } }
 
 @media screen and (max-width: 662px) {
-  .grupo-tarjetas {
+  .lanzamientos-container .grupo-tarjetas {
     display: grid;
     grid-template-rows: 500px 500px;
     grid-template-columns: 450px;
@@ -260,7 +332,11 @@ header {
   .hero h2 {
     font-size: 40px; }
   .hero p {
-    display: none; } }
+    display: none; }
+  .ar-canciones {
+    width: 524px;
+    height: 300px;
+    margin: 2px; } }
 
 @media screen and (max-width: 1276px) {
   .videos .videos-contenedor {
@@ -270,4 +346,59 @@ header {
 @media screen and (max-width: 1079px) {
   .media {
     display: block;
+    align-items: center; }
+  .artistas-global .artistas-container {
+    grid-template-columns: 1fr;
+    padding-left: 10px; }
+    .artistas-global .artistas-container .artistas-tarjetas a .artistas-imagen .art-background img {
+      width: 225px;
+      height: 335px; }
+  .ar-container .ar-data {
+    flex-direction: column;
+    align-items: center; }
+    .ar-container .ar-data .ar-texto {
+      text-align: center; }
+      .ar-container .ar-data .ar-texto h1 {
+        text-align: center; }
+      .ar-container .ar-data .ar-texto p {
+        padding-left: 0; }
+    .ar-container .ar-data img {
+      width: 70%;
+      height: 70%; }
+  .ar-container .ar-media {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .ar-canciones {
+    width: 543px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center; } }
+
+@media screen and (max-width: 375px) {
+  .hero {
+    background-size: 100%;
+    background-position: center;
+    height: 30vh;
+    background-attachment: unset; }
+    .hero h2 {
+      font-size: 80%;
+      text-align: center; }
+  .carousel-container {
+    margin: 6px;
+    align-items: center;
+    width: 48vh !important;
+    height: 48vh !important; }
+    .carousel-container .carousel-img img {
+      width: 50% !important;
+      height: 50%; }
+  .ar-canciones {
+    display: flex;
+    gap: 10px;
+    height: 538px;
+    width: 200px;
+    margin: 20px; }
+  #pie {
+    height: 165px; } }

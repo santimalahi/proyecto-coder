@@ -10,7 +10,7 @@
     justify-content: center; /* Centra verticalmente (opcional) */
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
-    color: orange;
+    color: $color-principal;
     font-size: 90%;
     text-align: center;
     background-image: url(../img/bg-hero2.jpg);
@@ -119,8 +119,11 @@
 
 .carousel-container{
         .carousel-img{
-            width: 100vh;
+            width: 75vh;
             height: 100vh;
+            img{
+                width: 100vh;
+            }
         }
 }
 
@@ -175,61 +178,158 @@
 
 // ARTISTAS
 
-.artistas-container{
-    margin: 50px;
-        .artistas-item{
-            padding-left: 30px;
-            margin-bottom: 50px;
-                .artistas-data{
-                    // display: grid;
-                    // grid-template-rows: 200px 1fr 1fr;
-                    // grid-template-columns: 500px 1000px;
-                    // grid-template-areas: 
-                    // "data img"
-                    // "data img"
-                    // " . redes";
-                    // gap: 30px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+.artistas-global{
+    margin: 30px;
+    text-align: center;
+        .art-titulo{
+            display: inline-block;
+            font-weight: 800;
+            
+        &:hover .art-letra{
+            transform: translateY(-5px);
+            font-size: 50px;
+            transition: ease-in-out 1s;
+            }
+            
+            .art-letra{
+                font-size: 35px;
+                transition: font-size ease-out 1s;
+            }
+        }
 
-                    
-                        .artistas-media{
-                            .artistas-foto{
-                                width: 400px;
-                                height: 600px;
+        .artistas-container{
+            margin: 20px;
+            padding: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            
+                .artistas-tarjetas{
+                    margin: 20px;
+
+                    a{
+
+                        .artistas-imagen{
+
+                            width: 100%;
+                            display: inline-block;
+
+                            .art-background{
+                                background-color: white;
+                                position: relative;
+                                display: inline-block;
+                                border-radius: 8px;
+
+
+                            &:hover{
+                                transform: translate(-5px,-3px);
                             }
-                            
-                            .artistas-redes{
-                                padding: 10px;
-                                a{
-                                    img{
-                                        width:20px;
-                                    }
+
+
+                            &:hover h2{
+                                visibility: visible;
+                                opacity: 1;
+                            }
+
+
+                                img{
+                                    width: 450px;
+                                    height: 670px;
+                                    border-radius: 8px;
+                                    object-fit: cover;
+                                &:hover{
+                                    opacity: 90%;
+                                    transition: opacity 0.5s ease;
+                                }
+                                }
+                                h2{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    color: orange;
+                                    font-weight: bold;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    transition: opacity 1s ease, visibility 0.5s ease;
                                 }
                             }
                         }
-                        p{
-                            width: 1750px;
-                            height: 353px;
-                            text-align:left;
-                            grid-area: data;
-                            margin-right: 100px;
-                        }
-                        // img{
-                        //     grid-area: img;
-                        // }
-                        // .artistas-redes{
-                        //     grid-area: redes;
-                        //     a{
-                        //         img{
-                        //             width: 20px;
-                        //         }
-                        //     }
-                        // }
+                    }
                 }
         }
 
+
+
+}
+
+
+
+// ARTISTAS BIO
+
+.ar-container{
+    
+    
+    .ar-data{
+        margin: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            width: nth($size-foto, 1);
+            height: nth($size-foto, 2);
+        }
+        .ar-texto{
+            h1{
+                text-align: right;
+                font-weight: 900;
+            }
+            p{
+                padding-left: 45px;
+                margin-top: 20px;
+                font-size: nth($size, 1);
+            }
+        }
+    }
+
+    .ar-media{
+        margin: 40px;
+        a{
+            img{
+                width: nth($size, 2);
+                margin: 5px;
+                
+            }
+        }
+    }
+}
+
+
+.ar-canciones{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        .ar-minitarjetas{
+            width: 262px;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            img{
+                width: 100px;
+                height: 100px;
+                align-items: left;
+            }
+            .ar-mini-info{
+                
+                    p{
+                        font-size: 13px;
+                    
+                    }
+                    
+            }
+        }
 }
 
 

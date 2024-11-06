@@ -1,11 +1,15 @@
 @media screen and (max-width:1156px){
-    .grupo-tarjetas{
-        display: grid;
-        grid-template-rows: 500px 500px;
-        grid-template-columns: 400px 400px;
-        align-items: center;
-        gap: 10px;
-        margin-left: 80px;
+    .lanzamientos-container{
+        
+        
+        .grupo-tarjetas{
+            display: grid;
+            grid-template-rows: 500px 500px;
+            grid-template-columns: 400px 400px;
+            align-items: center;
+            gap: 10px;
+            margin-left: 80px;
+        }
     }
 }
 
@@ -16,13 +20,11 @@
 }
 
 @media screen and (max-width:860px) {
-    .carousel{
-        .carousel-img{
-            img{
-                width: 500px;
-                height: 600px !important;
-            }
-        }
+    
+    
+
+    #spotify{
+        margin: 30px;
     }
 
     .artistas-container{
@@ -52,13 +54,17 @@
 }
 
 @media screen and (max-width:662px){
-    .grupo-tarjetas{
-        display: grid;
-        grid-template-rows: 500px 500px;
-        grid-template-columns: 450px;
-        align-items: center;
-        gap: 10px;
-        margin-left: 80px;
+    .lanzamientos-container{
+        
+        
+        .grupo-tarjetas{
+            display: grid;
+            grid-template-rows: 500px 500px;
+            grid-template-columns: 450px;
+            align-items: center;
+            gap: 10px;
+            margin-left: 80px;
+        }
     }
     .vid-item{
         width: 95%;
@@ -81,6 +87,13 @@
         }
     } 
 
+    .ar-canciones{
+
+        width: 524px;
+        height: 300px;
+        margin: 2px;       
+    }
+
 }
 
 
@@ -98,4 +111,114 @@
         display: block;
         align-items: center;
     }
+    .artistas-global{
+        
+        .artistas-container{
+            
+            grid-template-columns: 1fr;
+            padding-left: 10px;
+
+            .artistas-tarjetas{
+                
+                a{
+
+                    .artistas-imagen{
+                        
+                        .art-background{
+
+                            img{
+                                width: nth($size-foto, 1) / 2;
+                                height: nth($size-foto, 2) / 2;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .ar-container{
+
+        .ar-data{
+            flex-direction: column;
+            align-items: center;
+
+            .ar-texto{
+                text-align: center;
+
+                h1{
+                    text-align: center;
+                }
+                p{
+                    padding-left: 0;
+                }
+            }
+
+            img{
+                width: 70%;
+                height: 70%;
+            }
+        }
+        .ar-media{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .ar-canciones{
+        width: 543px;
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+
+
+@media screen and (max-width: 375px){
+
+    .hero{
+        background-size: 100%;
+        background-position: center;
+        height: 30vh;
+        background-attachment: unset    ;
+        
+            h2{
+                font-size: 80%;
+                text-align: center;
+            }
+    }
+    .carousel-container{
+        margin: 6px;
+        align-items: center;
+        width: 48vh !important;
+        height: 48vh !important;
+        .carousel-img{
+
+            
+            img{
+                width: 50% !important;
+                height: 50%;
+            }
+        }
+    }
+
+    .ar-canciones{
+        display: flex;
+        gap: 10px;
+        height: 538px;
+        width: 200px;
+        margin: 20px;
+    }
+
+    #pie{
+        height: 165px;
+    }
+
+    
 }

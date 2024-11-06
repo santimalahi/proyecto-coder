@@ -1,15 +1,26 @@
 #pie {
     border: 2px solid black;
-    bottom: 0;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: 150px;
-        a:active{
-            scroll-behavior: smooth;
-            transition: 2s ease;
+    // position: absolute;
+    // bottom: 0;
         
+        .redes{
+            
+            a{
+
+                img{
+                    width: 32px;
+                }
+            }
+        }
+        a{
+            scroll-behavior: smooth;
+            transition: scroll-behavior 4s ease;
         }
 }
 

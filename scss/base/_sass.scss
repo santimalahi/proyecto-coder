@@ -1,12 +1,18 @@
 
 
-$color-principal: orange;
-$color-secundario: blue;
+$color-principal: rgba(255, 166, 0, 0.76);
+$color-secundario: #22499e;
+
+$size: 16px, 32px, 64px, 128px;
+
+$size-foto: 450px, 670px;
+
+
 
 
 %boton{
-    background-color: blue;
-    color: orange;
+    background-color: $color-secundario;
+    color: $color-principal;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     width: 100px;
@@ -15,7 +21,7 @@ $color-secundario: blue;
 }
 
 %boton:hover{
-    background-color: orange;
-    color: blue;
+    background-color: $color-principal;
+    color: $color-secundario;
     font-family: 'Courier New', Courier, monospace;
 }
